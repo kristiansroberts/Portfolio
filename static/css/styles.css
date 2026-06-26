@@ -1,0 +1,61 @@
+/* Base page setup */
+body {
+    margin: 0;
+    min-height: 100vh;
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+    grid-template-rows: auto 1fr auto;
+    background-color: #000000;
+    color: #ffffff;
+}
+
+.page-content {
+    grid-column: 1 / -1;
+    grid-row: 2;
+    display: grid;
+    justify-items: start;
+    align-items: start;
+}
+
+/* footer setup */
+.site-footer {
+    grid-column: 1 / -1;
+    grid-row: 3;
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+    align-items: end;
+    padding: 1rem;
+}
+
+.site-contact {
+    grid-column: 1;
+    justify-self: start;
+    text-align: left;
+}
+
+.site-nav {
+    grid-column: 2;
+    justify-self: center;
+}
+
+
+/* Home page set up */
+.home-hero {
+    text-align: left;
+    margin: 0 0 0 .5rem;
+    transform: translateY(-12px);
+}
+
+.home-name {
+    margin: 0.25;
+}
+
+.home-title {
+    margin-top: -0.5rem;
+}
+
+.home-intro {
+    place-self: center;
+    width: min(56ch, 90vw);
+    padding: 1.25rem 1.5rem;
+}

@@ -10,17 +10,27 @@
 </head>
 
 <body>
-    <nav>
-        <a href="{% url 'home' %}">Home</a>
-        <a href="{% url 'about' %}">About</a>
-        <a href="{% url 'projects' %}">Projects</a>
-        <a href="{% url 'contact' %}">Contact</a>
-    </nav>
-
-    <main>
+    <main class="page-content">
         {% block content %}
         {% endblock %}
     </main>
+
+    <footer class="site-footer">
+        <div class="site-contact">
+
+            <p>Email: <a href="mailto:kristian@kristiansroberts.com">kristian@kristiansroberts.com</a></p>
+            <p>Phone: <a href="tel:+18592276507">+1 (859) 227-6507</a></p>
+            <p>GitHub: <a href="https://github.com/kristiansroberts">github.com/kristiansroberts</a></p>
+            <p>LinkedIn: <a href="https://www.linkedin.com/in/kristian-roberts">linkedin.com/in/kristian-roberts</a></p>
+        </div>
+
+        <nav class="site-nav">
+            <a href="{% url 'home' %}">Home</a>
+            <a href="{% url 'about' %}">About</a>
+            <a href="{% url 'projects' %}">Projects</a>
+        </nav>
+    </footer>
+
 </body>
 
 </html>
