@@ -15,7 +15,7 @@
 
 @font-face {
     font-family: 'Lora';
-    src: url('../fonts/lora_regular.woff2') format('woff2');
+    src: url('../fonts/lora.woff2') format('woff2');
     font-weight: normal;
     font-style: normal;
 }
@@ -111,6 +111,11 @@ body {
     width: min(56ch, 90vw);
     padding: 1.25rem 1.5rem;
     font-size: 1.55rem;
+}
+
+.projects-description {
+    font-family: 'Lora', Georgia;
+    font-size: 1.25rem;
 }
 
 /* About page set up */
