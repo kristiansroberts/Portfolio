@@ -1,6 +1,21 @@
+/* font setup */
 @font-face {
     font-family: 'Apple Chancery';
     src: url('../fonts/applechancery.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Poetical';
+    src: url('../fonts/poetical_regular.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Lora';
+    src: url('../fonts/lora_regular.woff2') format('woff2');
     font-weight: normal;
     font-style: normal;
 }
@@ -69,11 +84,11 @@ body {
 
 .home-intro {
     place-self: center;
-    width: min(34ch, 92vw);
+    width: min(20ch, 92vw);
     padding: 1.25rem 1.5rem;
     text-align: center;
-    font-family: Georgia, serif;
-    font-size: clamp(2rem, 3.2vw, 4rem);
+    font-family: 'Poetical';
+    font-size: clamp(4rem, 3.2vw, 5rem);
     font-weight: 400;
 }
 
@@ -115,6 +130,7 @@ body {
     place-self: center;
     align-self: start;
     width: min(56ch, 90vw);
+    font-family: 'Lora', Georgia;
     font-size: 1.25rem;
 }
 
@@ -122,5 +138,13 @@ body {
     place-self: center;
     width: min(56ch, 90vw);
     padding: 1.25rem 1.5rem;
+    font-family: 'Lora', Georgia;
     font-size: 1.55rem;
+}
+
+.about-resume,
+.about-intro {
+    margin-top: 0;
+    transform: translateY(-4rem);
+    /* change this value to move both evenly */
 }
