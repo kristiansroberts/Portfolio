@@ -6,28 +6,15 @@
 </div>
 
 <div class="projects-list">
+    {% for project in projects %}
     <div class="projects-item">
-        <h2 class="projects-title">NeuralPet</h2>
-        <p><a href="https://github.com/kristiansroberts/NeuralPet" target="_blank">GitHub Repository</a></p>
-        <p class="projects-description">NeuralPet is an AI-powered virtual pet that responds to user interactions. I
-            created it using an existing LLM model, specifically to attempt to constrain the model into acting a certain
-            way. Not only does it do so from a strictly behavioral standpoint, but it also works with further
-            constraints
-            such as hunger, boredom, happiness and tiredness. This allows the virtual pet to exhibit more realistic and
-            dynamic behavior, and thus feel like a Tamagotchi pet.</p>
+        <h2 class="projects-title">{{ project.title }}</h2>
+        <p><a href="{{ project.github_url }}" target="_blank">GitHub Repository</a></p>
+        {% if project.live_link %}
+        <p><a href="{{ project.live_link }}" target="_blank">Live Project</a></p>
+        {% endif %}
+        <p class="projects-description">{{ project.description }}</p>
     </div>
-    <div class="projects-item">
-        <h2 class="projects-title">Weapon Forge</h2>
-        <p><a href="https://github.com/kristiansroberts/Weapon_Forge" target="_blank">GitHub Repository</a></p>
-        <p class="projects-description">A text based game where you the player roll a random weapon, made up of
-            different
-            parts. You then simulate combat with waves of enemies who are also rolling randomly generated weapons, for
-            each opponent. It features over 25,280 possible weapon combinations. I designed this project with
-            scalability and modularity in mind. I wanted to create a system that could be easily expanded almost
-            infinitely. This project does this using only
-            Python, and since weapon generation is done dynamically, it can handle a large number of combinations
-            efficiently, while maintaining a very low runtime.</p>
-    </div>
-    <!-- Add more project items as needed -->
+    {% endfor %}
 </div>
 {% endblock %}
