@@ -11,3 +11,10 @@ class Project(models.Model):
     def __str__(self):
         return self.title
 
+class About(models.Model):
+    resume_link = models.URLField(max_length=200, blank=True)
+    paragraph1 = models.TextField()
+    paragraph2 = models.TextField(blank=True)
+
+    def __str__(self):
+        return "About Content"

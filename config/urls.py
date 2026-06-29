@@ -17,12 +17,12 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 from django.views.generic import TemplateView
-from portfolio.views import projects_page
+from portfolio.views import about_page, projects_page
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', TemplateView.as_view(template_name='portfolio/home.html'), name='home'),
-    path('about/', TemplateView.as_view(template_name='portfolio/about.html'), name='about'),
+    path('about/', about_page, name='about'),
     path('projects/', projects_page, name='projects'),
     path('contact/', TemplateView.as_view(template_name='portfolio/contact.html'), name='contact'),
 ]
