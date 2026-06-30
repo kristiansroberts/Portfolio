@@ -5,18 +5,16 @@
     <h1 class="about-name">About Me</h1>
 </div>
 
+{% if about %}
 <div class="about-resume">
-    <p class="about-resume-text"> <a href="/static/files/resume.pdf" target="_blank">Download my Resume</a> </p>
+    <a href="{{ about.resume_link|default:'/static/files/resume.pdf' }}" target="_blank">Download my Resume</a>
 </div>
 
 <div class="about-intro">
-    <p>Hello! I’m Kristian Roberts, a software developer with a modular approach and systems driven mindset. I am
-        proficient with both Python and Go, and prefer a clean, straightforward and explicit code approach, while still
-        using fundamental OOP design, and state-modeling skills. I have spent time with the important technologies that
-        go along with any sort of dev, such as SQL, and Git. Years of experience in leadership have given me the soft
-        skills and problem solving skills that have given me a great perspective on software development!</p>
-    <p>In my free time, I am a huge gamer, ranging over literally every genre of game. I love fishing, hiking and
-        kayaking as well and still like to spend plenty of time outdoors. I’ve been using more of my free time recently
-        to learn of video game design, and just practicing making games.</p>
+    <p>{{ about.paragraph1 }}</p>
+    {% if about.paragraph2 %}
+    <p>{{ about.paragraph2 }}</p>
+    {% endif %}
 </div>
+{% endif %}
 {% endblock %}
