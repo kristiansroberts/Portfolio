@@ -4,7 +4,7 @@ from portfolio.models import Project, About
 
 @admin.register(Project)
 class ProjectAdmin(admin.ModelAdmin):
-    list_display = ('title', 'featured', 'sort_order')
+    list_display = ('title', 'featured', 'sort_order', 'thumbnail')
     list_editable = ('featured', 'sort_order')
     search_fields = ('title', 'description')
     

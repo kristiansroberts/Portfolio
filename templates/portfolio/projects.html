@@ -8,8 +8,11 @@
 <div class="projects-list">
     {% for project in projects %}
     <div class="projects-item">
+        {% if project.thumbnail %}
+        <img src="{{ project.thumbnail.url }}" alt="{{ project.title }} Thumbnail" class="projects-thumbnail">
+        {% endif %}
         <h2 class="projects-title">{{ project.title }}</h2>
-        <p><a href="{{ project.github_url }}" target="_blank">GitHub Repository</a></p>
+        <p><a href="{{ project.github_link }}" target="_blank">GitHub Repository</a></p>
         {% if project.live_link %}
         <p><a href="{{ project.live_link }}" target="_blank">Live Project</a></p>
         {% endif %}

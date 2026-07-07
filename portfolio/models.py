@@ -7,6 +7,7 @@ class Project(models.Model):
     description = models.TextField()
     featured = models.BooleanField(default=False)
     sort_order = models.IntegerField(default=0)
+    thumbnail = models.ImageField(upload_to='project_thumbnails/', blank=True, null=True)
 
     def __str__(self):
         return self.title
